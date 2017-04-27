@@ -41,6 +41,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.HttpAuthHandler;
+import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -768,6 +769,11 @@ public class InAppBrowser extends CordovaPlugin {
 
                         // run startActivityForResult
                         cordova.startActivityForResult(InAppBrowser.this, Intent.createChooser(content, "Select File"), FILECHOOSER_REQUESTCODE);
+                    }
+
+                    // allow access to the camera, audio
+                    public void onPermissionRequest(final PermissionRequest request) {
+                        request.grant(request.getResources());
                     }
 
                 });
