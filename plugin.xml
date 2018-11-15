@@ -19,8 +19,13 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<<<<<<< HEAD
            id="cordova-plugin-inappbrowser"
       version="3.0.0">
+=======
+        id="kanayo-cordova-plugin-inappbrowser"
+        version="3.1.0-dev-kanayo">
+>>>>>>> 130736b... Change Close button to look more like the rest of the app.
 
     <name>InAppBrowser</name>
     <description>Cordova InAppBrowser Plugin</description>
